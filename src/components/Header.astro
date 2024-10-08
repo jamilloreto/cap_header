@@ -1,5 +1,5 @@
 <header class="containerHeader">
-  <a href="/">
+  <a href="/" class="wrapLogo">
     <img class="logo" src="/logo_cap1.png" />
   </a>
   <input id="checkDropdown" type="checkbox" class="checkboxDropdown" />
@@ -183,7 +183,6 @@
     top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
     height: 80px;
     padding: 0 1.5rem;
     background: rgba(255, 255, 255, 0.2);
@@ -191,24 +190,36 @@
     -webkit-backdrop-filter: blur(5px);
   }
 
+  .containerHeader .wrapLogo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  .containerHeader .iconBar,
+  .containerHeader .iconClose {
+    display: flex;
+    align-items: center;
+  }
+
   .containerHeader input {
     display: none;
   }
 
-  .logo {
+  .containerHeader .logo {
     height: 60px;
   }
 
-  .icon-md {
+  .containerHeader .icon-md {
     width: 20px;
     height: 20px;
   }
 
-  .icon {
+  .containerHeader .icon {
     width: 30px;
     height: 30px;
   }
-  .dropdownContainer {
+  .containerHeader .dropdownContainer {
     display: none;
     position: absolute;
     top: 80px;
@@ -218,54 +229,54 @@
     background-color: #fff;
   }
 
-  .li {
+  .containerHeader .li {
     padding: 0.5rem;
     border-radius: 0.25rem;
   }
 
-  .label {
+  .containerHeader .label {
     display: flex;
     gap: 0.25rem;
   }
 
-  .dropdownContainer > * {
+  .containerHeader .dropdownContainer > * {
     width: 100%;
   }
 
-  .checkboxDropdown:checked ~ .dropdownContainer {
+  .containerHeader .checkboxDropdown:checked ~ .dropdownContainer {
     display: block;
   }
 
-  .iconClose {
+  .containerHeader .iconClose {
     display: none;
   }
 
-  .checkboxDropdown:checked ~ .iconBar {
+  .containerHeader .checkboxDropdown:checked ~ .iconBar {
     display: none;
   }
 
-  .checkboxDropdown:checked ~ .iconClose {
-    display: block;
+  .containerHeader .checkboxDropdown:checked ~ .iconClose {
+    display: flex;
   }
 
-  .subMenu {
+  .containerHeader .subMenu {
     padding-left: 1rem;
   }
 
-  .subMenuOne,
-  .subMenuTwo {
+  .containerHeader .subMenuOne,
+  .containerHeader .subMenuTwo {
     display: none;
   }
 
-  .li:hover {
+  .containerHeader .li:hover {
     background-color: #e9ecef;
   }
-  .checkSubMenuOne:checked ~ .subMenuOne,
-  .checkSubMenuTwo:checked ~ .subMenuTwo {
+  .containerHeader .checkSubMenuOne:checked ~ .subMenuOne,
+  .containerHeader .checkSubMenuTwo:checked ~ .subMenuTwo {
     display: block;
   }
 
-  .links {
+  .containerHeader .links {
     display: none;
   }
 
@@ -273,24 +284,24 @@
     .containerHeader {
       padding: 0 4rem;
     }
-    .iconBar,
-    .iconClose {
+    .containerHeader .iconBar,
+    .containerHeader .iconClose {
       display: none;
     }
 
-    .links {
+    .containerHeader .links {
       display: flex;
       gap: 2rem;
     }
 
-    .link {
+    .containerHeader .link {
       position: relative;
       height: 80px;
       display: flex;
       align-items: center;
     }
 
-    .subMenuDesktop {
+    .containerHeader .subMenuDesktop {
       width: 220px;
       position: absolute;
       top: 80px;
@@ -301,17 +312,17 @@
       box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     }
 
-    .subMenuDesktopOne,
-    .subMenuDesktopTwo {
+    .containerHeader .subMenuDesktopOne,
+    .containerHeader .subMenuDesktopTwo {
       display: none;
     }
 
-    .checkSubMenuDesktopOne:checked ~ .subMenuDesktopOne,
-    .checkSubMenuDesktopTwo:checked ~ .subMenuDesktopTwo {
+    .containerHeader .checkSubMenuDesktopOne:checked ~ .subMenuDesktopOne,
+    .containerHeader .checkSubMenuDesktopTwo:checked ~ .subMenuDesktopTwo {
       display: block;
     }
 
-    .li {
+    .containerHeader .li {
       padding: 0.5rem 1rem;
       border-radius: unset;
     }
